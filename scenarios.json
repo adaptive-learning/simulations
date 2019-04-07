@@ -1,0 +1,309 @@
+{
+  "global_setting": {
+    "item_solver_chain": ["log_time_model"],
+    "practice_terminator_chain": ["available_item"],
+    "student_count": 1000,
+    "item_count": 100,
+    "a": -1,
+    "seed": 42,
+    "b_distribution_kwargs": {
+      "mean": 20,
+      "std": 1
+    },
+    "skill_distribution_kwargs": {}
+  },
+  "scenarios": {
+    "incremental ordered": {
+      "setting": {
+        "skill_distribution_kwargs": {
+          "mean": -3,
+          "std": 0.1
+        },
+        "max_gain": 6
+      },
+      "learning": "constant",
+      "order": "in order",
+      "attrition": false
+    },
+    "incr. small ordered": {
+      "setting": {
+        "skill_distribution_kwargs": {
+          "mean": -0.5,
+          "std": 0.1
+        },
+        "max_gain": 1
+      },
+      "learning": "constant",
+      "order": "in order",
+      "attrition": false
+    },
+    "diverse ordered": {
+      "setting": {
+        "skill_distribution_kwargs": {
+          "mean": -3,
+          "std": 3
+        },
+        "max_gain": 6
+      },
+      "learning": "constant",
+      "order": "in order",
+      "attrition": false
+    },
+    "diverse + att. ordered": {
+      "setting": {
+        "skill_distribution_kwargs": {
+          "mean": -3,
+          "std": 3
+        },
+        "max_gain": 6
+      },
+      "learning": "constant",
+      "order": "in order",
+      "attrition": true
+    },
+    "const. + att. ordered": {
+      "setting": {
+        "skill_distribution_kwargs": {
+          "mean": 0,
+          "std": 3
+        },
+        "max_gain": 0
+      },
+      "learning": "no",
+      "order": "in order",
+      "attrition": true
+    },
+    "incremental ordered": {
+      "setting": {
+        "skill_distribution_kwargs": {
+          "mean": -3,
+          "std": 0.1
+        },
+        "max_gain": 6
+      },
+      "learning": "constant",
+      "order": "in order",
+      "attrition": false
+    },
+    "incremental random": {
+      "setting": {
+        "skill_distribution_kwargs": {
+          "mean": -3,
+          "std": 0.1
+        },
+        "max_gain": 6
+      },
+      "learning": "constant",
+      "order": "random order",
+      "attrition": false
+    },
+    "step ordered": {
+      "setting": {
+        "skill_distribution_kwargs": {
+          "mean": -3,
+          "std": 0.1
+        },
+        "max_gain": 6,
+        "learn_prob": 0.05
+      },
+      "learning": "step",
+      "order": "in order",
+      "attrition": false
+    },
+    "step random": {
+      "setting": {
+        "skill_distribution_kwargs": {
+          "mean": -3,
+          "std": 0.1
+        },
+        "max_gain": 6,
+        "learn_prob": 0.05
+      },
+      "learning": "step",
+      "order": "random order",
+      "attrition": false
+    },
+    "steep ordered": {
+      "setting": {
+        "skill_distribution_kwargs": {
+          "mean": -3,
+          "std": 0.1
+        },
+        "max_gain": 6,
+        "learning_period": 10
+      },
+      "learning": "steep",
+      "order": "in order",
+      "attrition": false
+    },
+    "steep random": {
+      "setting": {
+        "skill_distribution_kwargs": {
+          "mean": -3,
+          "std": 0.1
+        },
+        "max_gain": 6,
+        "learning_period": 10
+      },
+      "learning": "steep",
+      "order": "random order",
+      "attrition": false
+    },
+    "const. + att. 20 random": {
+      "setting": {
+        "skill_distribution_kwargs": {
+          "mean": 0,
+          "std": 3
+        },
+        "max_gain": 0,
+        "first_k": 20
+      },
+      "learning": "no",
+      "order": "first k random",
+      "attrition": true
+    },
+    "const. + att. adaptation 20": {
+      "setting": {
+        "skill_distribution_kwargs": {
+          "mean": 0,
+          "std": 3
+        },
+        "max_gain": 0,
+        "adaptation_after": 20
+      },
+      "learning": "no",
+      "order": "adaptation order",
+      "attrition": true
+    },
+    "const. + att. 0.05 greedy": {
+      "setting": {
+        "skill_distribution_kwargs": {
+          "mean": 0,
+          "std": 3
+        },
+        "max_gain": 0,
+        "epsilon": 0.05
+      },
+      "learning": "no",
+      "order": "epsilon greedy",
+      "attrition": true
+    },
+    "diverse + att. 20 random": {
+      "setting": {
+        "skill_distribution_kwargs": {
+          "mean": -3,
+          "std": 3
+        },
+        "max_gain": 6,
+        "first_k": 20
+      },
+      "learning": "constant",
+      "order": "first k random",
+      "attrition": true
+    },
+    "diverse + att. adaptation 20": {
+      "setting": {
+        "skill_distribution_kwargs": {
+          "mean": -3,
+          "std": 3
+        },
+        "max_gain": 6,
+        "adaptation_after": 20
+      },
+      "learning": "constant",
+      "order": "adaptation order",
+      "attrition": true
+    },
+    "diverse + att. 0.05 greedy": {
+      "setting": {
+        "skill_distribution_kwargs": {
+          "mean": -3,
+          "std": 3
+        },
+        "max_gain": 6,
+        "epsilon": 0.05
+      },
+      "learning": "constant",
+      "order": "epsilon greedy",
+      "attrition": true
+    },
+    "incremental 20 random": {
+      "setting": {
+        "skill_distribution_kwargs": {
+          "mean": -3,
+          "std": 0.1
+        },
+        "max_gain": 6,
+        "first_k": 20
+      },
+      "learning": "constant",
+      "order": "first k random",
+      "attrition": false
+    },
+    "incremental adaptation 20": {
+      "setting": {
+        "skill_distribution_kwargs": {
+          "mean": -3,
+          "std": 0.1
+        },
+        "max_gain": 6,
+        "adaptation_after": 20
+      },
+      "learning": "constant",
+      "order": "adaptation order",
+      "attrition": false
+    },
+    "incremental 0.05 greedy": {
+      "setting": {
+        "skill_distribution_kwargs": {
+          "mean": -3,
+          "std": 0.1
+        },
+        "max_gain": 6,
+        "epsilon": 0.05
+      },
+      "learning": "constant",
+      "order": "epsilon greedy",
+      "attrition": false
+    },
+    "incr. small 20 random": {
+      "setting": {
+        "skill_distribution_kwargs": {
+          "mean": -0.5,
+          "std": 0.1
+        },
+        "max_gain": 1,
+        "first_k": 20
+      },
+      "learning": "constant",
+      "order": "first k random",
+      "attrition": false
+    },
+    "incr. small adaptation 20": {
+      "setting": {
+        "skill_distribution_kwargs": {
+          "mean": -0.5,
+          "std": 0.1
+        },
+        "max_gain": 1,
+        "adaptation_after": 20
+      },
+      "learning": "constant",
+      "order": "adaptation order",
+      "attrition": false
+    },
+    "incr. small 0.05 greedy": {
+      "setting": {
+        "skill_distribution_kwargs": {
+          "mean": -0.5,
+          "std": 0.1
+        },
+        "max_gain": 1,
+        "epsilon": 0.05
+      },
+      "learning": "constant",
+      "order": "epsilon greedy",
+      "attrition": false
+    }
+  }
+}

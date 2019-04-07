@@ -1,5 +1,5 @@
-# simulations
-Simulation framework for studying data collection biases using simulated student-item interactions.
+# Simulation framework
+Simulation framework for studying data collection biases using simulated student-item interactions. This framework produced results publish in Item Ordering Biases in Educational Data paper at AIED 2019 conference.
 
 ## Components
 ### simulations.py
